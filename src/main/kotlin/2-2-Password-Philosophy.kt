@@ -11,8 +11,8 @@ fun main() {
         val rule = PasswordPolicy.fromRule(rulePart)
 
         val charIndexRange = 1..passwordPart.length
-        if (rule.acceptableAppearances.first !in charIndexRange || rule.acceptableAppearances.last !in charIndexRange) continue
-        if ((passwordPart[rule.acceptableAppearances.first-1] == rule.character) xor (passwordPart[rule.acceptableAppearances.last-1] == rule.character)) {
+        if (rule.range.first !in charIndexRange || rule.range.last !in charIndexRange) continue
+        if ((passwordPart[rule.range.first-1] == rule.character) xor (passwordPart[rule.range.last-1] == rule.character)) {
             validPasswords++
         }
     }

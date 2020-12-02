@@ -12,7 +12,7 @@ fun main() {
         val rule = PasswordPolicy.fromRule(rulePart)
 
         val charCount = countCharactersInPassword(passwordPart)
-        if (charCount.getOrDefault(rule.character, 0) in rule.acceptableAppearances) {
+        if (charCount.getOrDefault(rule.character, 0) in rule.range) {
             validPasswords++
         }
     }

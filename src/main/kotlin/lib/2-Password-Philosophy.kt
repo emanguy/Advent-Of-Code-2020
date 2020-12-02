@@ -1,6 +1,6 @@
 package lib
 
-data class PasswordPolicy(val acceptableAppearances: IntRange, val character: Char) {
+data class PasswordPolicy(val range: IntRange, val character: Char) {
     companion object {
         /**
          * fromRule takes a password rule such as "1-3 a" and converts it into
