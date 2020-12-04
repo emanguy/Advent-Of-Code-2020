@@ -1,6 +1,6 @@
 package lib
 
-fun getPasswordSequence(inputLines: List<String>): Sequence<Map<String, String>> = sequence {
+fun getPassportSequence(inputLines: List<String>): Sequence<Map<String, String>> = sequence {
     var kvPairs = mutableMapOf<String, String>()
     for (line in inputLines) {
         if (line.isEmpty()) {

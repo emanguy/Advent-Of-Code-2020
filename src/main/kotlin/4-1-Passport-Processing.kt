@@ -1,4 +1,4 @@
-import lib.getPasswordSequence
+import lib.getPassportSequence
 import java.io.File
 
 fun main() {
@@ -6,7 +6,7 @@ fun main() {
 
     val requiredFields = listOf("byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid")
     var validPassports = 0
-    for (passportKeysAndValues in getPasswordSequence(inputLines)) {
+    for (passportKeysAndValues in getPassportSequence(inputLines)) {
         if (passportKeysAndValues.keys.containsAll(requiredFields)) validPassports++
     }
 

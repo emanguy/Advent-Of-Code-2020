@@ -1,4 +1,4 @@
-import lib.getPasswordSequence
+import lib.getPassportSequence
 import java.io.File
 
 fun main() {
@@ -11,7 +11,7 @@ fun main() {
     val passportIDRegex = """^\d{9}$""".toRegex()
     val validEyeColors = setOf("amb", "blu", "brn", "gry", "grn", "hzl", "oth")
 
-    for (passportKeysAndValues in getPasswordSequence(inputLines)) {
+    for (passportKeysAndValues in getPassportSequence(inputLines)) {
         if (!passportKeysAndValues.keys.containsAll(requiredFields)) continue
 
         var fieldsValid = true
